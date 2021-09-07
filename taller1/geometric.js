@@ -9,16 +9,27 @@ unidadMedida.addEventListener("change", () => {
   return console.log(unidad);
 });
 
-/* obteniendo la unidad de medida del triangulo
-const unidadMedida = document.getElementById("longitudTriangulo");
-let unidad = unidadMedida.value;
-console.log(unidad);
+/* obteniendo la unidad de medida del triangulo */
+const unidadMedidaT = document.getElementById("longitudTriangulo");
+let unidadT = unidadMedidaT.value;
+console.log(unidadT);
 
-evento que modifica el valor de unidad segun la seleccion hecha
-unidadMedida.addEventListener("change", () => {
-  unidad = document.getElementById("longitudTriangulo").value;
-  return console.log(unidad);
-}); */
+/* evento que modifica el valor de unidad segun la seleccion hecha */
+unidadMedidaT.addEventListener("change", () => {
+  unidadT = document.getElementById("longitudTriangulo").value;
+  return console.log(unidadT);
+});
+
+/* obteniendo la unidad de medida del circulo */
+const unidadMedidaC = document.getElementById("longitudCirculo");
+let unidadC = unidadMedidaC.value;
+console.log(unidadC);
+
+/* evento que modifica el valor de unidad segun la seleccion hecha */
+unidadMedidaC.addEventListener("change", () => {
+  unidadC = document.getElementById("longitudCirculo").value;
+  return console.log(unidadC);
+});
 
 /* Perimetro = P | Area = A */
 /*
@@ -92,3 +103,26 @@ const alturaIsosceles = (a, b, c) => {
     console.log("estas no son las medidas de un triangulo isosceles");
   }
 };
+
+/*
+  cicurlo
+  A = Pi*r^2
+  P = 2*Pi*r
+*/
+const areaCirculo = r => {
+  const area = Math.floor(Math.PI * (r * r));
+  console.log(`El area del circulo es de ${area} ${unidad}^2`);
+};
+const perimetroCirculo = r => {
+  const area = Math.floor(2 * Math.PI * r);
+  console.log(`El perimetro del circulo es de ${area} ${unidad}`);
+};
+
+getAreaCirculo.addEventListener("click", () => {
+  const radio = document.getElementById("radioCirculo").value;
+  areaCirculo(radio);
+});
+getPerimetroCirculo.addEventListener("click", () => {
+  const radio = document.getElementById("radioCirculo").value;
+  perimetroCirculo(radio);
+});
