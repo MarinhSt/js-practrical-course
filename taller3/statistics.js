@@ -97,3 +97,58 @@ const Moda = () => {
   /* console.log(dic); */
   return result;
 };
+
+/* inyectar resultado al html */
+/* ope = operation (promedio,mediana,moda) */
+const result = (result, ope) => {
+  console.log("dicionario length" + Object.keys(dic).length);
+  console.log("result" + result);
+  console.log("result length    " + result.length);
+  let typeOfMode = "";
+  let withoutMode = false;
+  let showMode;
+  const lengthResult = result.length;
+  /* verificacion de tipo de moda con if y operador ternario (conditional(ternary)operator) */
+  if (ope == "Moda") {
+    lengthResult ===
+    Object.keys(dic).length /* si todos los datos tienen la misma se ejecuta */
+      ? (withoutMode = true)
+      : lengthResult === 1
+      ? console.log((typeOfMode = "unimodal"))
+      : lengthResult === 2
+      ? (typeOfMode = "bimodal")
+      : (typeOfMode = "multimodal");
+    console.log(
+      "ejecutaaaa",
+      (result = result.toString().replace(/,/gi, " - "))
+    );
+  }
+  /* cambia el resultado en caso de que los datos no tengan moda */
+  withoutMode /* si es true se ejecuta */
+    ? (showMode = "Sin moda")
+    : (showMode = `${ope} ${typeOfMode} : ${result}`);
+  /* ope == "moda" && result.length > 1
+      ? (result = result.toString().replace(/,/gi, " - "))
+      : result; */
+  showResult.innerText = showMode;
+  /* ope == "promedio"
+      ? (showResult.innerText = `el promedio del conjunto de datos es : ${result}`)
+      : result.length === 1
+      ? (showResult.innerText = `la ${ope} del conjunto de datos corresponde ha : ${result} `)
+      : (showResult.innerText = `las ${ope}s del conjunto de datos corresponden ha : ${result[0]} y ${result[1]}`); */
+};
+
+/* eventos */
+
+getPromedio.addEventListener("click", () => {
+  console.log("aplicar promedio");
+  result(Promedio(), getPromedio.innerText);
+});
+getMediana.addEventListener("click", () => {
+  console.log("aplicar mediana");
+  result(Mediana(), getMediana.innerText);
+});
+getModa.addEventListener("click", () => {
+  console.log("aplicar moda");
+  result(Moda(), getModa.innerText);
+});
