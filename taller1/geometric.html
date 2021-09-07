@@ -6,5 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometric</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Figuras geometricas</h1>
+
+    <div class="card-cuadrado">
+      <h2>Ingrese las medidas correspondientes</h2>
+      <label for="ladoCuadrado" class="Lado-cuadrado">lado a</label>
+      <input id="ladoCuadrado" type="number" />
+      <select name="longitud" id="longitudCuadrado">
+        <option value="km">kilometro</option>
+        <option value="hm">Hectometro</option>
+        <option value="dam">Decametro</option>
+        <option value="m">Metro</option>
+        <option value="dm">Decimetro</option>
+        <option value="cm">Centimetro</option>
+        <option value="mm">Milimetro</option>
+      </select>
+      <button type="button" id="getAreaCuadrado">obtener area</button>
+      <button type="button" id="getPerimetroCuadrado">obtener perimetro</button>
+    </div>
+    <div class="card-triangulo">
+      <h2>Ingrese las medidas correspondientes</h2>
+      <label for="ladoTrianguloA" class="lado-a">lado a</label>
+      <input id="ladoTrianguloA" type="number" /><br />
+      <label for="ladoTrianguloB" class="lado-b">lado b</label>
+      <input id="ladoTrianguloB" type="number" /><br />
+      <label for="ladoTrianguloC" class="lado-c">lado c</label>
+      <input id="ladoTrianguloC" type="number" /><br />
+      <label for="alturaTriangulo" class="altura">altura</label>
+      <input id="alturaTriangulo" type="number" /><br />
+      <select name="longitud" id="longitudTriangulo">
+        <option value="km">kilometro</option>
+        <option value="hm">Hectometro</option>
+        <option value="dam">Decametro</option>
+        <option value="m">Metro</option>
+        <option value="dm">Decimetro</option>
+        <option value="cm">Centimetro</option>
+        <option value="mm">Milimetro</option>
+      </select>
+      <button type="button" id="getAreaTriangulo">obtener area</button>
+      <button type="button" id="getPerimetroTriangulo">
+        obtener perimetro
+      </button>
+    </div>
+    <div class="card-circulo">
+      <h2>Ingrese las medidas correspondientes</h2>
+      <label for="radioCirculo" class="radio">radio</label>
+      <input id="radioCirculo" type="number" />
+      <select name="longitud" id="longitudCirculo">
+        <option value="km">kilometro</option>
+        <option value="hm">Hectometro</option>
+        <option value="dam">Decametro</option>
+        <option value="m">Metro</option>
+        <option value="dm">Decimetro</option>
+        <option value="cm">Centimetro</option>
+        <option value="mm">Milimetro</option>
+      </select>
+      <button type="button" id="getAreaCirculo">obtener area</button>
+      <button type="button" id="getPerimetroCirculo">obtener perimetro</button>
+    </div>
+
+    <script src="./geometric.js"></script>
+  </body>
 </html>
